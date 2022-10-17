@@ -14,23 +14,5 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/api")
 public class PumpController {
-    private final StationService stationService;
-
-    public StationController(StationService stationService) {
-        this.stationService = stationService;
-    }
-    @GetMapping("stations")
-    public ResponseEntity<List<Station>> getAll(){
-        stationService.saveRecords();
-        List<Station> stations = stationService.findAll();
-
-        return ResponseEntity.ok(stations);
-    }
-    @GetMapping("stations/{id}")
-    public ResponseEntity<Optional<Station>> getStationById(@PathVariable Integer id){
-        Optional<Station> station = stationService.findById(id);
-
-        return ResponseEntity.ok(station);
-    }
 
 }
