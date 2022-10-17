@@ -1,16 +1,19 @@
 package com.formation.velo.service;
 
-import com.formation.velo.model.Stations;
+import com.formation.velo.model.Station;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface StationService {
-    List<Stations> findAll();
-    Optional<Stations> findById(Integer id);
-    Stations save(Stations Station);
+    List<Station> findAll();
+    Optional<Station> findById(Integer id);
+    Station save(Station station);
 
     void deleteById(Integer id);
 
-    void delete(Stations Station);
+    void delete(Station station);
+   // OpenDataVeloNantes getRecord();
+    void saveRecords();
+    Optional<Station> findByRecordId(String recordId);
 }
