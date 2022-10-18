@@ -32,7 +32,7 @@ public class Station implements Serializable {
     private Integer availabeBikesStands;
     private String recordId;
 
-    private String adress;
+    private String address;
 
 
 }
