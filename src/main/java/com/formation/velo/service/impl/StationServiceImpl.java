@@ -72,7 +72,7 @@ public class StationServiceImpl implements StationService {
                     stationToUpdate.get().setBikeStands(record.getFields().getBikeStands());
                     stationToUpdate.get().setStatus(record.getFields().getStatus());
                     stationToUpdate.get().setAddress(record.getFields().getAddress());
-                   ;
+
 
                     save(stationToUpdate.get());
                 }else{
