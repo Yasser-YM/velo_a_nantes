@@ -1,13 +1,12 @@
 package com.formation.velo.model;
 
-import com.google.gson.annotations.SerializedName;
+
 import lombok.*;
+import org.joda.time.DateTime;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
-@lombok.Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,39 +14,30 @@ import java.util.Date;
 @Setter
 @Entity
 
-@Table(name = "pumps")
-public class Pump implements Serializable {
+@Table(name = "pump")
+public class Pump {
+    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int pumpId;
     private String ville;
     private String pop;
-    private String regName;
-    private String comArmCode;
-    private String depName;
-    private String prixNom;
-    private String comCode;
-    private String epciName;
-    private String depCode;
-    private String prixId;
-
-    private String servicesService;
-
-    private String horairesAutomate24_24;
-
-    private String comArmName;
-
+    private String reg_name;
+    private String com_arm_code;
+    private String dep_name;
+    private String com_code;
+    private String epci_name;
+    private int dep_code;
+    private String services_service;
+    private String horaires_automate;
     private Date prixMaj;
-    private String pumpId;
-    private String regCode;
+    private int id;
+    private int reg_code;
     private String adresse;
-    private Double latitude;
     private Double longitude;
-
-    private String epciCode;
+    private Double latitude;
+    private String epci_code;
     private String cp;
-
     private double prixValeur;
-
-    private String comName;
+    private String recordId;
 }
